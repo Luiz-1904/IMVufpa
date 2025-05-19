@@ -134,6 +134,23 @@
 </footer>
 
 
-<script src="script.js"></script>
+<script src="script.js">// Correção emergencial - remove qualquer estilo problemático
+document.addEventListener('DOMContentLoaded', function() {
+  const problematicElements = [
+    document.querySelector('main'),
+    document.querySelector('.hero-content'),
+    document.querySelectorAll('.project-section')
+  ];
+  
+  problematicElements.forEach(el => {
+    if (el) {
+      if (el.length) {
+        el.forEach(e => e.style.cssText = 'opacity:1 !important; transform:none !important; visibility:visible !important');
+      } else {
+        el.style.cssText = 'opacity:1 !important; transform:none !important; visibility:visible !important';
+      }
+    }
+  });
+});</script>
 </body>
 </html>
