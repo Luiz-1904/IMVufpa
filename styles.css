@@ -466,10 +466,14 @@ footer {
     height: auto;
   }
 
+    .project-section .image-content {
+    order: -1; /* Isso move a imagem para cima do texto */
+  }
+  
   .text-content,
   .image-content {
     flex: 1 1 100%;
-    min-height: 300px;
+    min-height: 250px;
   }
 
   .nav-right {
