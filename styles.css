@@ -642,44 +642,78 @@ footer {
     height: 250px;
   }
 }
+/* Estilos para telas pequenas (mobile) */
 @media (max-width: 768px) {
+  /* Ajuste geral da navegação */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    height: auto;
+  }
+
+  .nav-center {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+    order: -1; /* Coloca o logo acima */
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .pill {
+    margin: 4px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  /* Ajuste do hero */
+  .hero-content {
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-circles {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  /* Ajuste das seções */
   .project-section {
     flex-direction: column;
     height: auto;
   }
-  
+
   .text-content, 
   .image-content {
     flex: 1 1 100%;
-    min-height: 50vh;
+    min-height: 300px;
   }
-   .cta-buttons {
-    flex-direction: column;
-    width: 100%;
+
+  .text-content {
+    padding: 30px 20px;
   }
-  
-  .cta-button {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .custom-list li {
-    font-size: 0.95rem;
-  }
-  
-  .hero-circles {
-    gap: 40px;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .circle-item {
-    margin-bottom: 60px;
-    width: 200px;
-    height: 200px;
+
+  /* Ajuste dos destaques */
+  .highlights-container {
+    grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 576px) {
   .hero-content h1 {
     font-size: 2.2rem;
